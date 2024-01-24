@@ -4,6 +4,15 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+
+
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -15,6 +24,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { wrap } from "module"
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -37,26 +47,89 @@ export function BFCalcForm() {
   }
 
   return (
+
+    <div className="form-wrap flex flex-col">
+      <Select>
+  <SelectTrigger className="w-[180px]">
+    <SelectValue placeholder="Gender" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="light">Male</SelectItem>
+    <SelectItem value="dark">Female</SelectItem>
+  </SelectContent>
+</Select>
+      <p>Enter Height In Inches</p>
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="">
         <FormField
           control={form.control}
           name="username"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
+            <FormItem className="flex">
+              {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="Enter Height" {...field} className="max-w-28"/>
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
-              <FormMessage />
+              <Button type="submit" className="bg-rose-600 ml-2">Submit</Button>
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
       </form>
     </Form>
+    <p>Enter Weight In Pounds lbs</p>
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="">
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem className="flex">
+              {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
+              <FormControl>
+                <Input placeholder="Enter Weight" {...field} className="max-w-28"/>
+              </FormControl>
+              <Button type="submit" className="bg-rose-600 ml-2">Submit</Button>
+            </FormItem>
+          )}
+        />
+      </form>
+    </Form>
+    <p>Enter Neck Circumference Inches</p>
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="">
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem className="flex">
+              {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
+              <FormControl>
+                <Input placeholder="Enter Neck" {...field} className="max-w-28"/>
+              </FormControl>
+              <Button type="submit" className="bg-rose-600 ml-2">Submit</Button>
+            </FormItem>
+          )}
+        />
+      </form>
+    </Form>
+    <p>Enter Waist Circumference Inches</p>
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="">
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem className="flex">
+              {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
+              <FormControl>
+                <Input placeholder="Enter Waist" {...field} className="max-w-28"/>
+              </FormControl>
+              <Button type="submit" className="bg-rose-600 ml-2">Submit</Button>
+            </FormItem>
+          )}
+        />
+      </form>
+    </Form>
+    </div>
   )
 }
