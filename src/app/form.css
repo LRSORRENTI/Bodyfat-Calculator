@@ -31,6 +31,7 @@ body {
   border-radius: 10px;
   border-style: ridge;
   font-size: 1.4rem;
+  background-color: #fff;
   /* padding-left: 7px;
   padding-right: 7px; */
   /* text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
@@ -49,7 +50,7 @@ body {
   width: 16.1rem;
   border: 5px solid var(--sec-color);
   border-style: ridge;
-  background-color: var(--fourth);
+  background-color: #fff;
   color: #282828;
   padding-top: 20px;
   border-radius: 10px;
@@ -63,7 +64,7 @@ body {
 }
 
 .calcBtn:hover {
-  background-color: inherit;
+  background-color: #fff;
 }
 
 .selectTrigger {
