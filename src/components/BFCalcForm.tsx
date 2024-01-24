@@ -47,8 +47,8 @@ export function BFCalcForm() {
   }
 
   return (
-
-    <div className="form-wrap flex flex-col">
+    <div className="entire-wrap flex justify-center align-middle">
+    <div className="form-wrap flex flex-col justify-center align-middle">
       <Select>
   <SelectTrigger className="w-[180px]">
     <SelectValue placeholder="Gender" />
@@ -130,6 +130,7 @@ export function BFCalcForm() {
         />
       </form>
     </Form>
+    </div>
     </div>
   )
 }

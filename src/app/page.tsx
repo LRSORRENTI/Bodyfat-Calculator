@@ -7,7 +7,9 @@ export default function Home() {
    <main>
     Home
    </main>
+   <div className="flex justify-center align-middle ml-10">
    <BFCalcForm/>
+   </div>
    </>
   );
 }
