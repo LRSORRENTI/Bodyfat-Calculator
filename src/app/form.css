@@ -16,7 +16,8 @@ body {
 }
 
 .entire-wrap {
-  border: 5px solid var(--sec-color);
+  border: 7px solid var(--sec-color);
+  border-style: ridge;
   padding: 15px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -26,10 +27,14 @@ body {
 
 .card-head {
   font-weight: 1000;
-  border: 3px solid var(--main-bg-color);
+  border: 5px solid var(--sec-color);
   border-radius: 10px;
+  border-style: ridge;
+  font-size: 1.4rem;
   /* padding-left: 7px;
   padding-right: 7px; */
+  /* text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3); */
   width: 16.1rem;
   text-align: center;
   padding-top: 10px;
@@ -42,9 +47,13 @@ body {
 
 .calcBtn {
   width: 16.1rem;
-  border: 3px solid var(--main-bg-color);
-  background-color: var(--sec-color);
+  border: 7px solid var(--third);
+  border-style: ridge;
+  background-color: var(--main-bg-color);
   color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }

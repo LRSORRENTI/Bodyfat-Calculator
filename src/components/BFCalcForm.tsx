@@ -49,7 +49,7 @@ export function BFCalcForm() {
   return (
     <div className="entire-wrap flex justify-center align-middle">
     <div className="form-wrap flex flex-col justify-center align-middle">
-      <p className="mb-4 mx-auto text-lg card-head">Calculate Bodyfat %</p>
+      <p className="mb-4 mx-auto text-lg card-head">Calculate Body Fat %</p>
       <Select>
   <SelectTrigger className="max-w-64 mb-2">
     <SelectValue placeholder="Gender" />
