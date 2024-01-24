@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { wrap } from "module"
-
+import '../app/form.css'
 const formSchema = z.object({
   username: z.string().min(2, {
     message: "Username must be at least 2 characters.",
@@ -49,7 +49,7 @@ export function BFCalcForm() {
   return (
     <div className="entire-wrap flex justify-center align-middle">
     <div className="form-wrap flex flex-col justify-center align-middle">
-      <p className="mb-4 mx-auto text-lg font-extrabold bg-slate-600 p-4 rounded-xl">Calculate Bodyfat %</p>
+      <p className="mb-4 mx-auto card-head">Calculate Bodyfat %</p>
       <Select>
   <SelectTrigger className="max-w-64 mb-2">
     <SelectValue placeholder="Gender" />
