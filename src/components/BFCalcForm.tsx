@@ -69,7 +69,7 @@ export function BFCalcForm() {
             <FormItem className="flex">
               {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
               <FormControl>
-                <Input placeholder="Enter Height" {...field} className="max-w-64 selectContent"/>
+                <Input placeholder="Enter Height In Inches" {...field} className="max-w-64 selectContent"/>
               </FormControl>
            
             </FormItem>
@@ -87,7 +87,7 @@ export function BFCalcForm() {
             <FormItem className="flex">
               {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
               <FormControl>
-                <Input placeholder="Enter Weight" {...field} className="max-w-64 selectContent"/>
+                <Input placeholder="Enter Weight In lbs" {...field} className="max-w-64 selectContent"/>
               </FormControl>
               
             </FormItem>
@@ -105,7 +105,7 @@ export function BFCalcForm() {
             <FormItem className="flex">
               {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
               <FormControl>
-                <Input placeholder="Enter Neck" {...field} className="max-w-64 mb-4 selectContent"/>
+                <Input placeholder="Enter Neck Inches" {...field} className="max-w-64 mb-4 selectContent"/>
               </FormControl>
             </FormItem>
           )}
@@ -122,7 +122,7 @@ export function BFCalcForm() {
             <FormItem className="flex">
               {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
               <FormControl>
-                <Input placeholder="Enter Waist" {...field} className="max-w-64 mb-4 selectContent"/>
+                <Input placeholder="Enter Waist In Inches" {...field} className="max-w-64 mb-4 selectContent"/>
               </FormControl>
              
             </FormItem>
@@ -130,7 +130,7 @@ export function BFCalcForm() {
         />
       </form>
     </Form>
-    <Button type="submit" className=" calcBtn mx-auto font-extrabold text-lg">Calculate</Button>
+    <Button type="submit" className=" calcBtn mx-auto font-extrabold text-lg"><p className="btnP">Calculate</p></Button>
     </div>
     
     </div>
