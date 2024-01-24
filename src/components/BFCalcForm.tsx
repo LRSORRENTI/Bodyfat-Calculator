@@ -49,7 +49,7 @@ export function BFCalcForm() {
   return (
     <div className="entire-wrap flex justify-center align-middle">
     <div className="form-wrap flex flex-col justify-center align-middle">
-      <p className="mb-4">Calculate Bodyfat %</p>
+      <p className="mb-4 mx-auto text-lg font-extrabold bg-slate-600 p-4 rounded-xl">Calculate Bodyfat %</p>
       <Select>
   <SelectTrigger className="max-w-64 mb-2">
     <SelectValue placeholder="Gender" />
@@ -130,7 +130,7 @@ export function BFCalcForm() {
         />
       </form>
     </Form>
-    <Button type="submit" className="bg-rose-600">Calculate</Button>
+    <Button type="submit" className="bg-rose-600 mx-auto font-extrabold text-lg" style={{width: "16.1rem", border: "3px solid navy", paddingTop: "20px", paddingBottom: "20px"}}>Calculate</Button>
     </div>
     
     </div>
