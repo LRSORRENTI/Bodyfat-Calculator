@@ -51,15 +51,15 @@ export function BFCalcForm() {
     <div className="form-wrap flex flex-col justify-center align-middle">
       <p className="mb-4 mx-auto text-lg card-head">Calculate Body Fat %</p>
       <Select>
-  <SelectTrigger className="max-w-64 mb-2">
+  <SelectTrigger className="max-w-64 mb-2 selectTrigger">
     <SelectValue placeholder="Gender" />
   </SelectTrigger>
-  <SelectContent>
+  <SelectContent className="selectContent">
     <SelectItem value="light">Male</SelectItem>
     <SelectItem value="dark">Female</SelectItem>
   </SelectContent>
 </Select>
-      <p>Enter Height In Inches</p>
+      <p className="font-bold text-sm text-center">Enter Height In Inches</p>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="mb-4">
         <FormField
@@ -69,7 +69,7 @@ export function BFCalcForm() {
             <FormItem className="flex">
               {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
               <FormControl>
-                <Input placeholder="Enter Height" {...field} className="max-w-64"/>
+                <Input placeholder="Enter Height" {...field} className="max-w-64 selectContent"/>
               </FormControl>
            
             </FormItem>
@@ -77,7 +77,7 @@ export function BFCalcForm() {
         />
       </form>
     </Form>
-    <p>Enter Weight In Pounds lbs</p>
+    <p className="font-bold text-sm text-center">Enter Weight In Pounds lbs</p>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="mb-4">
         <FormField
@@ -87,7 +87,7 @@ export function BFCalcForm() {
             <FormItem className="flex">
               {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
               <FormControl>
-                <Input placeholder="Enter Weight" {...field} className="max-w-64"/>
+                <Input placeholder="Enter Weight" {...field} className="max-w-64 selectContent"/>
               </FormControl>
               
             </FormItem>
@@ -95,7 +95,7 @@ export function BFCalcForm() {
         />
       </form>
     </Form>
-    <p>Enter Neck Circumference Inches</p>
+    <p className="font-bold text-sm text-center">Enter Neck Circumference Inches</p>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="">
         <FormField
@@ -105,14 +105,14 @@ export function BFCalcForm() {
             <FormItem className="flex">
               {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
               <FormControl>
-                <Input placeholder="Enter Neck" {...field} className="max-w-64 mb-4"/>
+                <Input placeholder="Enter Neck" {...field} className="max-w-64 mb-4 selectContent"/>
               </FormControl>
             </FormItem>
           )}
         />
       </form>
     </Form>
-    <p>Enter Waist Circumference Inches</p>
+    <p className="font-bold text-sm text-center">Enter Waist Circumference Inches</p>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="">
         <FormField
@@ -122,7 +122,7 @@ export function BFCalcForm() {
             <FormItem className="flex">
               {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
               <FormControl>
-                <Input placeholder="Enter Waist" {...field} className="max-w-64 mb-4"/>
+                <Input placeholder="Enter Waist" {...field} className="max-w-64 mb-4 selectContent"/>
               </FormControl>
              
             </FormItem>
