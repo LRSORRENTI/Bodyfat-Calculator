@@ -4,10 +4,7 @@ import { BFCalcForm } from "@/components/BFCalcForm";
 export default function Home() {
   return (
     <>
-   <main>
-    Home
-   </main>
-   <div className="flex justify-center align-middle ml-10">
+   <div className="flex justify-center align-middle ml-10 mt-20">
    <BFCalcForm/>
    </div>
    </>

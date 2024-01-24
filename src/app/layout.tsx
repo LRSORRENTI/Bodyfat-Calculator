@@ -17,11 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav>
-          <h1>
-            Body Fat % Calculator 
-          </h1>
-        </nav>
         {children}
       </body>
     </html>
