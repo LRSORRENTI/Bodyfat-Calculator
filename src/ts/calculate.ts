@@ -44,5 +44,5 @@ const femaleInputsUS: BodyFatInputsUS = {
     gender: 'female'
 };
 
-console.log(calculateBodyFatPercentageUS(maleInputsUS)); // Output: Body fat percentage for male
-console.log(calculateBodyFatPercentageUS(femaleInputsUS)); // Output: Body fat percentage for female
+console.log(calculateBodyFatPercentageUS(maleInputsUS).toFixed(2)); // Output: Body fat percentage for male
+console.log(calculateBodyFatPercentageUS(femaleInputsUS).toFixed(2)); // Output: Body fat percentage for female
