@@ -137,14 +137,11 @@ const [isDialogOpen, setIsDialogOpen] = useState(false);
       </form>
     </Form>
     <Dialog>
-          <DialogTrigger as={Button} onClick={() => setIsDialogOpen(true)}>
-            {/* <p className="btnP">Calculate</p> */}
-            <Button type="submit"
-            className=" calcBtn mx-auto font-extrabold text-lg"
-            onClick={() => setIsDialogOpen(true)}
-            ><p className="btnP">Calculate</p>
-    </Button>
-          </DialogTrigger>
+          <DialogTrigger
+          className=" calcBtn mx-auto font-extrabold text-lg"
+            onClick={() => setIsDialogOpen(true)}>
+            Calculate
+            </DialogTrigger>
           <DialogContent className=" dialog-cont max-w-64">
               <div className="dialog-wrap">
               <h3 className="dialog-h3">Body Fat: 20% </h3>
@@ -155,9 +152,7 @@ const [isDialogOpen, setIsDialogOpen] = useState(false);
             </DialogClose>
           </DialogContent>
         </Dialog>
-        
     </div>
-    
-    </div>
+  </div>
   )
 }
