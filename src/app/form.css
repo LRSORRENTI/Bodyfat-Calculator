@@ -85,3 +85,18 @@ body {
   /* border: 5px solid var(--third); */
   border-style: ridge;
 }
+
+.dialog-cont {
+  border: 10px solid var(--main-bg-color);
+  border-style: ridge;
+}
+
+.dialog-wrap {
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  height: 8px;
+}
+
+.dialog-h3 {
+}

@@ -1,9 +1,10 @@
 "use client"
-
+import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-
+import { Button } from "@/components/ui/button"
+import { Dialog, DialogTrigger, DialogContent, DialogClose } from "@/components/ui/dialog";
 import {
   Select,
   SelectContent,
@@ -11,9 +12,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-
-
-import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
@@ -26,25 +24,33 @@ import {
 import { Input } from "@/components/ui/input"
 import { wrap } from "module"
 import '../app/form.css'
-const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-})
 
 export function BFCalcForm() {
-    const form = useForm<z.infer<typeof formSchema>>({
+
+const formSchema = z.object({
+    username: z.string().min(2, {
+      message: "Username must be at least 2 characters.",
+    }),
+  })
+
+const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
           username: "",
         },
       })
+  
+const [isDialogOpen, setIsDialogOpen] = useState(false);
+
  // 2. Define a submit handler.
  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values)
-  }
+  // Do something with the form values.
+  // ✅ This will be type-safe and validated.
+  console.log(values);
+  
+  // Open the dialog after form submission
+  setIsDialogOpen(true);
+}
 
   return (
     <div className="entire-wrap flex justify-center align-middle">
@@ -105,7 +111,7 @@ export function BFCalcForm() {
             <FormItem className="flex">
               {/* <FormLabel className="mr-2 pt-3">Height</FormLabel> */}
               <FormControl>
-                <Input placeholder="Enter Neck Inches" {...field} className="max-w-64 mb-4 selectContent"/>
+                <Input placeholder="Enter Neck In Inches" {...field} className="max-w-64 mb-4 selectContent"/>
               </FormControl>
             </FormItem>
           )}
@@ -130,7 +136,26 @@ export function BFCalcForm() {
         />
       </form>
     </Form>
-    <Button type="submit" className=" calcBtn mx-auto font-extrabold text-lg"><p className="btnP">Calculate</p></Button>
+    <Dialog>
+          <DialogTrigger as={Button} onClick={() => setIsDialogOpen(true)}>
+            {/* <p className="btnP">Calculate</p> */}
+            <Button type="submit"
+            className=" calcBtn mx-auto font-extrabold text-lg"
+            onClick={() => setIsDialogOpen(true)}
+            ><p className="btnP">Calculate</p>
+    </Button>
+          </DialogTrigger>
+          <DialogContent className=" dialog-cont max-w-64">
+              <div className="dialog-wrap">
+              <h3 className="dialog-h3">Body Fat: 20% </h3>
+              </div>
+            <DialogClose
+              onClick={() => setIsDialogOpen(false)} // Close the dialog when clicked
+            >
+            </DialogClose>
+          </DialogContent>
+        </Dialog>
+        
     </div>
     
     </div>
