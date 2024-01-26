@@ -1,5 +1,6 @@
-
+'use client'
 import { BFCalcForm } from "@/components/BFCalcForm";
+
 
 export default function Home() {
   return (
